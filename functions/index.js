@@ -5,6 +5,16 @@ exports.sayHello = functions.https.onRequest((request, response) => {
     response.send(message);
 });
 
+exports.showStudent = functions.https.onRequest((request, response) => {
+    const student = {
+        firstName: 'Brian',
+        lastName: 'Serein',
+        email: 'thisguy@hotmail.com',
+        phone: '346-CALL-PETE'
+    }
+    response.send(student);
+})
+
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
